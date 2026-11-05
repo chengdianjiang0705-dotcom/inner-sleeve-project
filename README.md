@@ -2,104 +2,115 @@
 
 **Music worth listening to.**
 
-Inner Sleeve Archive is a student music appreciation website exploring the creative worlds of **Frank Ocean**, **Daniel Caesar**, and **Tyler, the Creator**. It connects artist biographies with focused song studies, listening recommendations, and short sourced quotations. The aim is to help visitors move beyond recognising a song title and start noticing the voices, arrangements, and ideas within the music.
+Inner Sleeve Archive is a student music appreciation website introducing **Frank Ocean**, **Daniel Caesar** and **Tyler, the Creator**. It combines artist biographies, focused song studies, listening recommendations and short interview excerpts for listeners who want to understand more of what they hear.
 
-The project was developed for a Web Technologies course using HTML, CSS, and plain JavaScript.
+The current six-page website is in `Final version-submit`. It uses semantic HTML, shared CSS and plain JavaScript, with no framework or build step.
 
 ## Links
 
-- [Live course preview — Stage 04](https://chengdianjiang0705-dotcom.github.io/inner-sleeve-project/course%20stages/04-week-2-style-and-content/site/)
+- [Live site](https://chengdianjiang0705-dotcom.github.io/inner-sleeve-project/Final%20version-submit/)
 - [GitHub repository](https://github.com/chengdianjiang0705-dotcom/inner-sleeve-project)
 
-The preview link opens the Stage 04 snapshot. This README describes the full local website in `project code`, which also includes the later Machine page.
+## Pages
 
-## Artist studies
-
-| Artist | Focus song | Album |
+| Page | File | Content |
 | --- | --- | --- |
-| Frank Ocean | Self Control | Blonde |
-| Daniel Caesar | Let Me Go | NEVER ENOUGH |
-| Tyler, the Creator | November | Flower Boy |
+| Home | `index.html` | A three-artist gatefold illustration, an interactive album sleeve and photographic artist entries |
+| Frank | `frank.html` | Biography, career milestones, Self Control study, listening recommendations and interview excerpts |
+| Daniel | `daniel.html` | Biography, career milestones, Let Me Go study, listening recommendations and interview excerpts |
+| Tyler | `tyler.html` | Biography, career milestones, November study, listening recommendations and interview excerpts |
+| Listening Room | `machine.html` | A thirteen-track audio player and a nine-clue artist identification game |
+| Sources | `sources.html` | Editorial and AI credits, recording provenance, classroom references and research sources |
 
-Each artist page includes a biography, selected career milestones, a detailed listening study, three entry tracks, and supporting photographs.
+The artist pages combine animated portrait-and-quotation introductions with continuous story, analysis and listening sections. A sticky section menu jumps between those sections. Twenty short interview excerpts are integrated into the three artist pages.
 
-## Pages and features
+The homepage sleeve cycles through **Blonde**, **NEVER ENOUGH** and **Flower Boy**. Each reveal stays available, with links to its artist study and a track in the Listening Room.
 
-| Page | Content |
-| --- | --- |
-| Home | Introduction to the archive, artist overview, and a random quotation |
-| Frank | Frank Ocean biography, Self Control study, and listening recommendations |
-| Daniel | Daniel Caesar biography, Let Me Go study, and listening recommendations |
-| Tyler | Tyler, the Creator biography, November study, and listening recommendations |
-| Quotes | Twenty sourced quotations with artist filters |
-| Machine | Nine-clue artist identification quiz and an interactive record sleeve |
-| Sources | Research links, editorial credits, copyright notice, and AI assistance disclosure |
+## Listening and search
 
-Additional features include:
+Thirteen supplied MP3 files are included in `Final version-submit/audio`. The Listening Room plays them through the browser's audio element, with track selection, seeking, volume, artist filters and automatic queue progression. Song buttons on artist pages open the same player in a dialog. Closing an artist player pauses its audio.
 
-- Shared navigation and footer generated with JavaScript to avoid repeated code.
-- Artist-page tabs for moving between background information, song analysis, and entry tracks.
-- NetEase Cloud Music listening previews that show the selected recording before opening its external listening link.
-- A quiz with feedback, scoring, and restart controls.
-- A record sleeve that begins with the INNER SLEEVE design, flips to a randomly selected album cover, and resets after three seconds.
-- Responsive layouts, keyboard controls, visible focus styles, and reduced-motion support.
+Sitewide search covers all six pages, including artist biographies, song studies, interview excerpts, sources and the game. Use the Search button or press `/` outside a text field. Searches are case-insensitive and match all entered words. Song results can select a recording in the Listening Room; Ctrl+click preserves the browser's new-tab behavior. Press Escape to close search.
 
-## Visual direction
-
-The website uses a quiet music-archive style: warm walnut backgrounds, cream text, copper accents, and a subtle studio photograph. Bold headings and italic quotations create a clear reading hierarchy. Artist portraits, performance photographs, and record sleeves connect the listening notes with each artist's visual world.
-
-## Technology
-
-- **HTML5:** semantic page structure, images, links, buttons, and accessible labels.
-- **CSS3:** typography, responsive grids, visual styling, and sleeve animations.
-- **JavaScript:** navigation, artist tabs, quotations, the quiz, and listening previews.
-
-The website does not require a framework, package installation, compilation, or a backend. Quiz scores are temporary, and no account is required. Music recordings are not hosted by the project.
+Shared JavaScript generates the navigation and footer. The website also includes keyboard controls, visible focus styles and support for reduced-motion preferences. The quiz keeps only temporary state; no account, database or backend is required.
 
 ## Run locally
 
-1. Open the `project code` folder in Visual Studio Code.
-2. Use the **Live Server** extension to open `index.html` in a browser.
-3. Navigate through the pages and try the interactive features.
+1. Open `Final version-submit` in Visual Studio Code, or open `Inner Sleeve Archive.code-workspace` from this workspace.
+2. Use Live Server to open `index.html` in a browser.
+3. Explore the artist pages, flip the homepage sleeve and try the Listening Room and game.
 
-Alternatively, use your browser's **Open File** option to open `project code/index.html` directly. Keep the HTML, CSS, JavaScript, and image folders together so relative paths continue to work.
-
-To edit the source, open the HTML files in VS Code. To see the rendered website, open them through your browser or Live Server.
+You can also open `Final version-submit/index.html` directly in a browser. Keep the HTML, CSS, JavaScript, images, audio and fonts together so their relative paths continue to resolve.
 
 ## Project structure
 
 ```text
 music project/
 ├── README.md
-├── project code/              # Current seven-page website
+├── Inner Sleeve Archive.code-workspace
+├── Final version-submit/          # Current six-page website
 │   ├── index.html
 │   ├── frank.html
 │   ├── daniel.html
 │   ├── tyler.html
-│   ├── quotes.html
 │   ├── machine.html
 │   ├── sources.html
 │   ├── styles.css
+│   ├── redesign.css
 │   ├── machine.css
-│   ├── js/                    # Shared and page-specific interactions
-│   └── images/                # Artist photographs and website artwork
-├── course stages/             # Prepared course milestone versions
-├── project git/               # Numbered local file checkpoints
-├── photo resource/            # Supplied original image resources
-└── research/                  # Development notes and verification tools
+│   ├── search.css
+│   ├── favicon.svg
+│   ├── favicon-32.png
+│   ├── favicon-192.png
+│   ├── apple-touch-icon.png
+│   ├── icon-master.png
+│   ├── js/                       # Navigation, search, players, sleeve and game
+│   ├── images/                   # Illustrations, photographs and record covers
+│   ├── audio/                    # Thirteen supplied MP3 recordings
+│   └── fonts/                    # Self-hosted DM Sans and its licence
+├── submission photo/             # Form text and five submission images
+├── course stages/                # Earlier course snapshots
+├── project git/                  # Numbered local checkpoints
+└── research/                     # Development and verification tools
 ```
 
-The course stages cover project selection, the initial layout, three development weeks, publication preparation, and submission. The numbered folders in `project git` are saved file copies; they do not replace the repository's real Git commit history.
+The course snapshots and numbered checkpoints document earlier versions. The current website is the `Final version-submit` folder; the repository's actual commits provide its Git history.
 
-## Checking the website
+## Search maintenance
 
-Check the layout at phone and desktop widths. Try the navigation menu, artist tabs, quotation filters, random quotation button, listening previews, quiz scoring and restart, and the random sleeve reveal. Confirm that images load and links open the intended destinations.
+The generated index in `Final version-submit/js/search-data.js` lets search work through Live Server and when opening files directly. After changing website text or game questions, regenerate it from the workspace root:
 
-## Sources and credits
+```powershell
+python research/build-search-index.py "Final version-submit"
+```
 
-Biographical information and quotations link to their sources on the artist and Sources pages. Listening notes are editorial interpretations. Artist photographs and official album artwork remain the property of their respective rights holders; this project does not claim ownership of them.
+Index generation uses Python's standard library and Node to read the game data. Website visitors need only a browser.
 
-AI tools assisted with research organisation, early drafting, English language polishing, HTML/CSS/JavaScript preparation, and troubleshooting. This assistance is also disclosed on the Sources page.
+The six pages already contain complete HTTPS Open Graph URLs and a sharing image URL for the live-site directory above. If the publication directory changes, update each page's `og:url`, `og:image` and `twitter:image` to match it.
+
+## Submission materials
+
+Use `submission photo/FINAL-SUBMISSION.txt` for the title, short and long descriptions, repository link and live-site link.
+
+| Field | File in `submission photo` | Size |
+| --- | --- | --- |
+| Cover image | `ready-to-upload/01-cover-image.jpg` | 1200 × 630, under 100 KB |
+| Desktop screenshot | `ready-to-upload/02-desktop-screenshot.png` | 1920 × 1080 |
+| Mobile screenshot | `ready-to-upload/03-mobile-screenshot.png` | 375 × 812 |
+| App icon | `ready-to-upload/04-app-icon.png` | 180 × 180 PNG |
+| Favicon | `ready-to-upload/05-favicon.png` | 32 × 32 PNG |
+
+These five files are also packaged in `submission photo/ready-to-upload.zip`. The desktop and phone images are current homepage viewport captures, without browser bars.
+
+Publish the complete `Final version-submit` folder at the matching repository path, including its audio, images, JavaScript, stylesheets and fonts. The submission screenshots are separate form uploads.
+
+## Sources and editorial credits
+
+Artist information and interview excerpts link to research sources. Listening notes are editorial interpretations. The Sources page distinguishes supplied recordings and artwork from verified release references; it records the limits of the available provenance information.
+
+AI assisted research organisation, drafting, English polishing, code preparation, troubleshooting and the homepage gatefold illustration. The gatefold is an AI-generated composite, rather than a photograph of the artists together. These contributions are disclosed on the Sources page.
+
+DM Sans is hosted locally with its SIL Open Font License in `Final version-submit/fonts/OFL.txt`. Article text uses Arial or Helvetica; quotations and Collection typography use Georgia.
 
 ## Author
 
