@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Machine | Inner Sleeve Archive</title>
+        <meta name="description" content="A nine-clue artist game and a one-button record machine.">
+        <meta property="og:title" content="Machine | Inner Sleeve Archive">
+        <meta property="og:description" content="A nine-clue artist game and a one-button record machine.">
+        <meta property="og:type" content="website">
+        <!-- Final HTTPS sharing URLs are set with research/set-final-public-url.py after the publication path is confirmed. -->
+        <meta property="og:image" content="images/og-image.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:alt" content="Inner Sleeve Archive: warm studio scene, original record mark and three album sleeves">
+        <meta name="twitter:image" content="images/og-image.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="theme-color" content="#211a16">
+        <link rel="icon" type="image/svg+xml" href="favicon.svg">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="styles.css">
+        <script src="js/nav.js" defer>
+        </script>
+        <link rel="stylesheet" href="machine.css">
+        <script src="js/machine.js" defer>
+        </script>
+        <script src="js/record-machine.js" defer>
+        </script>
+        <link rel="stylesheet" href="search.css">
+        <script src="js/search-data.js" defer></script>
+        <script src="js/search.js" defer></script>
+    </head>
+    <body class="" id="top">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <header class="site-header" id="site-header">
+        </header>
+        <noscript>
+            <p class="wrap noscript-note">JavaScript is off. Read the archive through these links: <a href="index.html">Home</a>, <a href="frank.html">Frank</a>, <a href="daniel.html">Daniel</a>, <a href="tyler.html">Tyler</a>, <a href="quotes.html">Quotes</a>, <a href="machine.html">Machine</a>, <a href="sources.html">Sources</a>. Interactive features need JavaScript.</p>
+        </noscript>
+        <main data-search-anchor id="main" class="wrap">
+            <section id="archive-search-1" data-search-anchor class="page-intro">
+                <p class="page-index">06 / THE LISTENING MACHINE</p>
+                <h1>A little play. A closer listen.</h1>
+                <p class="lead">Match the clue to the artist. Songs, sleeve colours and creative choices are all part of the same conversation.</p>
+            </section>
+            <div class="game-layout">
+                <section id="archive-search-2" data-search-anchor class="machine-panel" aria-label="Artist identification game">
+                    <div class="machine-intro" id="game-intro">
+                        <img class="record" src="favicon.svg" alt="Original Inner Sleeve record mark" width="100" height="100">
+                        <p class="eyebrow">The archive challenge</p>
+                        <h2>Who made this world?</h2>
+                        <p>Try nine clues about Frank Ocean, Daniel Caesar and Tyler, the Creator. Read the explanation after each answer and make a new listening connection.</p>
+                        <ol class="game-rules">
+                            <li id="archive-search-3" data-search-anchor>One clue, three possible artists.</li>
+                            <li id="archive-search-4" data-search-anchor>One point for each correct answer.</li>
+                            <li id="archive-search-5" data-search-anchor>No timer, sound clips or sign-in. Restart whenever you like.</li>
+                        </ol>
+                        <button class="button" id="start-game">Start listening challenge <span aria-hidden="true">&#8594;</span>
+                        </button>
+                    </div>
+                    <div id="game-play" hidden>
+                        <div class="game-status">
+                            <span>CLUE <strong id="round-number">1</strong> / 9</span>
+                            <span>SCORE <strong id="score">0</strong> / 9</span>
+                        </div>
+                        <div class="progress-track" aria-hidden="true">
+                            <div class="progress-fill" id="progress-fill">
+                            </div>
+                        </div>
+                        <p class="clue-label" id="clue-type">
+                        </p>
+                        <h2 class="game-question" id="game-question" tabindex="-1">
+                        </h2>
+                        <div class="answer-options" role="group" aria-label="Choose the artist">
+                            <button class="answer-button" data-answer="frank">Frank Ocean</button>
+                            <button class="answer-button" data-answer="daniel">Daniel Caesar</button>
+                            <button class="answer-button" data-answer="tyler">Tyler, the Creator</button>
+                        </div>
+                        <p class="feedback" id="feedback" role="status" aria-live="polite">
+                        </p>
+                        <div class="game-controls">
+                            <button class="small-button" id="restart-game">Restart</button>
+                            <button class="button" id="next-question" disabled>Next clue &#8594;</button>
+                        </div>
+                    </div>
+                    <div class="game-result" id="game-result" hidden>
+                        <p class="eyebrow">Round complete</p>
+                        <h2 id="result-heading" tabindex="-1">Keep the curiosity.</h2>
+                        <p class="result-number" id="final-score">
+                        </p>
+                        <p id="result-message">
+                        </p>
+                        <button class="button" id="play-again">Play again <span aria-hidden="true">&#8635;</span>
+                        </button>
+                        <div class="read-again">
+                            <a href="frank.html#work">Revisit Frank &#8599;</a>
+                            <a href="daniel.html#work">Revisit Daniel &#8599;</a>
+                            <a href="tyler.html#work">Revisit Tyler &#8599;</a>
+                        </div>
+                    </div>
+                </section>
+                <aside class="machine-sidebar" aria-label="Listen before you play">
+                    <p class="eyebrow">Need a clue?</p>
+                    <h3>The artist studies</h3>
+                    <article id="archive-search-6" data-search-anchor>
+                        <h3>01 / Frank</h3>
+                        <p>Start with perspective, memory and the changing voices of Self Control.</p>
+                        <a href="frank.html#work">Open the study &#8599;</a>
+                    </article>
+                    <article id="archive-search-7" data-search-anchor>
+                        <h3>02 / Daniel</h3>
+                        <p>Notice vocal phrasing, space and the sound of intimacy in Let Me Go.</p>
+                        <a href="daniel.html#work">Open the study &#8599;</a>
+                    </article>
+                    <article id="archive-search-8" data-search-anchor>
+                        <h3>03 / Tyler</h3>
+                        <p>Follow the connection between sound, colour and the memories of November.</p>
+                        <a href="tyler.html#work">Open the study &#8599;</a>
+                    </article>
+                </aside>
+            </div>
+            <section id="archive-search-9" data-search-anchor class="section useless-machine" aria-labelledby="toy-heading">
+                <div>
+                    <p class="eyebrow">A smaller machine / one button</p>
+                    <h2 id="toy-heading">The record that needs a moment.</h2>
+                    <p class="lead">Flip the sleeve. Discover one of three records.</p>
+                    <button class="button" id="record-button" aria-describedby="record-response">Flip the sleeve &#8635;</button>
+                    <p class="note" id="record-response" role="status" aria-live="polite">Ready when you are.</p>
+                </div>
+                <div class="record-sleeve" aria-hidden="true">
+                    <div class="toy-record" id="toy-record">
+                        <div class="vinyl-face"><span class="record-label">IS</span></div>
+                    </div>
+                    <div class="toy-sleeve">
+                        <div class="sleeve-flip">
+                            <div class="sleeve-front"><span>INNER<br>SLEEVE</span><small>TAKE YOUR TIME.</small></div>
+                            <div class="sleeve-back"><img id="sleeve-album" src="images/frank-album.jpg" alt="" width="190" height="190"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer" id="site-footer">
+        </footer>
+    </body>
+</html>

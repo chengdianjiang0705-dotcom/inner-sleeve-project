@@ -1,0 +1,158 @@
+/* One button starts a sleeve flip and record spin, then JavaScript resets it. */
+.useless-machine {
+    display:grid;
+    grid-template-columns:1fr 280px;
+    gap:35px;
+    align-items:center
+}
+.useless-machine h2 {
+    font-size:35px
+}
+.useless-machine .lead {
+    font-size:13px
+}
+#record-response {
+    min-height:45px;
+    margin-top:20px;
+    max-width:420px
+}
+.record-sleeve {
+    height:220px;
+    position:relative;
+    width:270px;
+    justify-self:end;
+    perspective:700px
+}
+.toy-sleeve {
+    position:absolute;
+    left:0;
+    top:14px;
+    width:190px;
+    height:190px;
+    z-index:1
+}
+.sleeve-flip {
+    width:100%;
+    height:100%;
+    position:relative;
+    transform-style:preserve-3d
+}
+.sleeve-front,.sleeve-back {
+    position:absolute;
+    inset:0;
+    backface-visibility:hidden;
+    box-shadow:0 12px 26px #100b0880
+}
+.sleeve-front {
+    background:var(--accent);
+    color:var(--bg);
+    padding:22px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between
+}
+.sleeve-front span {
+    font-size:25px;
+    letter-spacing:2px;
+    line-height:1.25;
+    font-weight:700
+}
+.sleeve-front small {
+    font-size:8px;
+    letter-spacing:1.4px
+}
+.sleeve-back img {
+    width:100%;
+    height:100%;
+    object-fit:cover
+}
+.sleeve-back {
+    transform:rotateY(180deg)
+}
+.toy-record {
+    position:absolute;
+    left:62px;
+    top:24px;
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    overflow:hidden;
+    box-shadow:0 8px 18px #100b0866
+}
+.vinyl-face {
+    position:relative;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    border:1px solid #755d48;
+    background:conic-gradient(from 30deg,transparent 0deg 30deg,#e9d9b52e 50deg,transparent 75deg 210deg,#e9d9b51f 230deg,transparent 255deg),repeating-radial-gradient(circle,#150f0b 0px,#150f0b 5px,#3c2c20 6px,#150f0b 7px)
+}
+.record-label {
+    position:absolute;
+    inset:56px;
+    border-radius:50%;
+    background:#e9b743;
+    color:#352318;
+    display:grid;
+    place-content:center;
+    text-align:center;
+    font-size:9px;
+    font-weight:700;
+    line-height:1.2;
+    letter-spacing:1px
+}
+/* Separate travel and rotation keep the circular record inside the phone layout. */
+.is-playing .toy-record {
+    animation:record-detour 2.8s ease-in-out both
+}
+.is-playing .vinyl-face {
+    animation:vinyl-spin 2.8s ease-in-out both
+}
+.is-playing .toy-sleeve {
+    animation:sleeve-lift 2.8s ease-in-out both
+}
+.is-playing .sleeve-flip {
+    animation:sleeve-turn 2.8s ease-in-out both
+}
+@keyframes record-detour {
+    0%,100% { transform:translate(0,0) }
+    22%,72% { transform:translate(35px,-6px) }
+}
+@keyframes vinyl-spin {
+    from { transform:rotate(0deg) }
+    to { transform:rotate(720deg) }
+}
+@keyframes sleeve-lift {
+    0%,100% { transform:translateY(0) rotate(0deg) }
+    25%,70% { transform:translateY(-12px) rotate(-4deg) }
+}
+@keyframes sleeve-turn {
+    0%,8% { transform:rotateY(0deg) }
+    35%,65% { transform:rotateY(180deg) }
+    92%,100% { transform:rotateY(360deg) }
+}
+@media(prefers-reduced-motion:reduce) {
+    .record,.is-playing .toy-record,.is-playing .vinyl-face,
+    .is-playing .toy-sleeve,.is-playing .sleeve-flip {
+        animation:none
+    }
+    .is-playing .toy-record {
+        transform:translateX(25px)
+    }
+    .is-playing .sleeve-flip {
+        transform:rotateY(180deg)
+    }
+}
+@media(max-width:760px) {
+    .useless-machine {
+        grid-template-columns:1fr
+    }
+    .record-sleeve {
+        justify-self:start;
+        margin-top:10px;
+        margin-left:10px
+    }
+    .useless-machine h2 {
+        font-size:30px
+    }
+}
