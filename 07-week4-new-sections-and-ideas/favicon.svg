@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Inner Sleeve Archive</title>
+  <rect width="64" height="64" fill="#e0c3a2"/>
+  <path d="M13 13h28v38H13z" fill="none" stroke="#211a16" stroke-width="4"/>
+  <circle cx="39" cy="32" r="17" fill="#211a16"/>
+  <circle cx="39" cy="32" r="5" fill="#e0c3a2"/>
+  <path d="M21 22v20" stroke="#211a16" stroke-width="3"/>
+</svg>
