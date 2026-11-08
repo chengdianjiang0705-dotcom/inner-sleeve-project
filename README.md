@@ -4,11 +4,11 @@
 
 Inner Sleeve Archive is a student music appreciation website introducing **Frank Ocean**, **Daniel Caesar** and **Tyler, the Creator**. It combines artist biographies, focused song studies, listening recommendations and short interview excerpts for listeners who want to understand more of what they hear.
 
-The current six-page website is in `Final version-submit`. It uses semantic HTML, shared CSS and plain JavaScript, with no framework or build step.
+The current six-page website is in `final-version-submit`. It uses semantic HTML, shared CSS and plain JavaScript, with no framework or build step.
 
 ## Links
 
-- [Live site](https://chengdianjiang0705-dotcom.github.io/inner-sleeve-project/Final%20version-submit/)
+- [Live site](https://chengdianjiang0705-dotcom.github.io/inner-sleeve-project/final-version-submit/)
 - [GitHub repository](https://github.com/chengdianjiang0705-dotcom/inner-sleeve-project)
 
 ## Pages
@@ -28,7 +28,7 @@ The homepage sleeve cycles through **Blonde**, **NEVER ENOUGH** and **Flower Boy
 
 ## Listening and search
 
-Thirteen supplied MP3 files are included in `Final version-submit/audio`. The Listening Room plays them through the browser's audio element, with track selection, seeking, volume, artist filters and automatic queue progression. Song buttons on artist pages open the same player in a dialog. Closing an artist player pauses its audio.
+Thirteen supplied MP3 files are included in `final-version-submit/audio`. The Listening Room plays them through the browser's audio element, with track selection, seeking, volume, artist filters and automatic queue progression. Song buttons on artist pages open the same player in a dialog. Closing an artist player pauses its audio.
 
 Sitewide search covers all six pages, including artist biographies, song studies, interview excerpts, sources and the game. Use the Search button or press `/` outside a text field. Searches are case-insensitive and match all entered words. Song results can select a recording in the Listening Room; Ctrl+click preserves the browser's new-tab behavior. Press Escape to close search.
 
@@ -36,11 +36,11 @@ Shared JavaScript generates the navigation and footer. The website also includes
 
 ## Run locally
 
-1. Open `Final version-submit` in Visual Studio Code, or open `Inner Sleeve Archive.code-workspace` from this workspace.
+1. Open `final-version-submit` in Visual Studio Code, or open `Inner Sleeve Archive.code-workspace` from this workspace.
 2. Use Live Server to open `index.html` in a browser.
 3. Explore the artist pages, flip the homepage sleeve and try the Listening Room and game.
 
-You can also open `Final version-submit/index.html` directly in a browser. Keep the HTML, CSS, JavaScript, images, audio and fonts together so their relative paths continue to resolve.
+You can also open `final-version-submit/index.html` directly in a browser. Keep the HTML, CSS, JavaScript, images, audio and fonts together so their relative paths continue to resolve.
 
 ## Project structure
 
@@ -48,7 +48,7 @@ You can also open `Final version-submit/index.html` directly in a browser. Keep 
 music project/
 ├── README.md
 ├── Inner Sleeve Archive.code-workspace
-├── Final version-submit/          # Current six-page website
+├── final-version-submit/          # Current six-page website
 │   ├── index.html
 │   ├── frank.html
 │   ├── daniel.html
@@ -74,14 +74,14 @@ music project/
 └── research/                     # Development and verification tools
 ```
 
-The course snapshots and numbered checkpoints document earlier versions. The current website is the `Final version-submit` folder; the repository's actual commits provide its Git history.
+The course snapshots and numbered checkpoints document earlier versions. The current website is the `final-version-submit` folder; the repository's actual commits provide its Git history.
 
 ## Search maintenance
 
-The generated index in `Final version-submit/js/search-data.js` lets search work through Live Server and when opening files directly. After changing website text or game questions, regenerate it from the workspace root:
+The generated index in `final-version-submit/js/search-data.js` lets search work through Live Server and when opening files directly. After changing website text or game questions, regenerate it from the workspace root:
 
 ```powershell
-python research/build-search-index.py "Final version-submit"
+python research/build-search-index.py "final-version-submit"
 ```
 
 Index generation uses Python's standard library and Node to read the game data. Website visitors need only a browser.
@@ -102,7 +102,7 @@ Use `submission photo/FINAL-SUBMISSION.txt` for the title, short and long descri
 
 These five files are also packaged in `submission photo/ready-to-upload.zip`. The desktop and phone images are current homepage viewport captures, without browser bars.
 
-Publish the complete `Final version-submit` folder at the matching repository path, including its audio, images, JavaScript, stylesheets and fonts. The submission screenshots are separate form uploads.
+Publish the complete `final-version-submit` folder at the matching repository path, including its audio, images, JavaScript, stylesheets and fonts. The submission screenshots are separate form uploads.
 
 ## Sources and editorial credits
 
@@ -110,7 +110,7 @@ Artist information and interview excerpts link to research sources. Listening no
 
 AI assisted research organisation, drafting, English polishing, code preparation, troubleshooting and the homepage gatefold illustration. The gatefold is an AI-generated composite, rather than a photograph of the artists together. These contributions are disclosed on the Sources page.
 
-DM Sans is hosted locally with its SIL Open Font License in `Final version-submit/fonts/OFL.txt`. Article text uses Arial or Helvetica; quotations and Collection typography use Georgia.
+DM Sans is hosted locally with its SIL Open Font License in `final-version-submit/fonts/OFL.txt`. Article text uses Arial or Helvetica; quotations and Collection typography use Georgia.
 
 ## Author
 
